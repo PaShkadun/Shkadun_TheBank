@@ -107,6 +107,7 @@ namespace Shkadun_TheBank
         //Получение кредита
         public static void GetCredit(List<Account> listAccount, int choose)
         {
+            if (listAccount[choose].listCard.Count == 0) { return; }
             try
             {
                 ListCard(listAccount, choose);  //Выбор счёта
